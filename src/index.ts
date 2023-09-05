@@ -29,3 +29,8 @@ console.log('personne modifiee', personneModifiee.gendar)
 
 const p2: Ipersonne = {name : 'Laforge', surname :'Thomas', gendar : 'm', age : 31}
 console.log(p2)
+
+const fs = require('fs-extra')
+
+const packageObj = fs.readJsonSync('./personne.json',p2)
+console.log(packageObj.version) // => 2.0.0
